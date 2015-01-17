@@ -1,8 +1,11 @@
 
-# Global variables
+################# Global variables #################
+
 dataDir <- "data"
 dataLocation <- file.path(dataDir, "UCI HAR Dataset")
 dataLocationAlt <- "UCI HAR Dataset"
+
+################# Functions #################
 
 # Load the data, unzip and report into directory [dataDir]. The directory will be
 # created if non-existent.
@@ -34,6 +37,8 @@ loadData <- function() {
         
         dateDownloaded
 }
+
+################# Start of main script #################
 
 # Preferred data location is the directory "data", but we can also live with a
 # specific directory right in the working directory.
