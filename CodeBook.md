@@ -24,7 +24,7 @@ this exploration is in the file ```research.txt``` in the root of the git-hub re
 There are 6 id's and labels for activities.
 
 #### Features
-See also ```features_info.txt```
+See also ```features_info.txt```.
 
 There are 9 signals that do not have an XYZ movement. There are 8 signals with 
 an XYZ movement, that makes a total of 3 * 8 = 24 such signals. Total signals:
@@ -35,6 +35,33 @@ Variables can be known because they all have '()' braces at the end.
 
 Total amount of features = signals times variables = ```33 * 17 = 561```.
 
+#### Subjects
+Subjects are the persons that took part in the experiment. Each row in
+```train/subject_train.txt``` and ```test/subject_test.txt``` identifies the 
+subject who performed the activity for each window sample. 30 people in total 
+took part in the experiment. The following probes in ```R``` give hints about
+the dimensions of the data:
+```R
+> dftrain <- read.table("data/UCI HAR Dataset/train/subject_train.txt")
+> dftest <- read.table("data/UCI HAR Dataset/test/subject_test.txt")
+> table(dftrain)
+dftrain
+  1   3   5   6   7   8  11  14  15  16  17  19  21  22  23  25  26  27  28  29  30 
+347 341 302 325 308 281 316 323 328 366 368 360 408 321 372 409 392 376 382 344 383 
+> table(dftest)
+dftest
+  2   4   9  10  12  13  18  20  24 
+302 317 288 294 320 327 364 354 381 
 
+> nrow(dftrain)
+[1] 7352
+> nrow(dftest)
+[1] 2947
+
+> nrow(dftest) + nrow(dftrain)
+[1] 10299
+```
+The subject files contain row headers as subject-id's (persons) 
+for the ```7352 + 2947 = 10299``` observations
 
 
