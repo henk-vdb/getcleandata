@@ -93,7 +93,7 @@ Each table in the ```test/Internal Signals``` directory has dimensions ```2947, 
 table in the ```train/Internal Signals``` directory has dimensions ```7352, 128```. 
 These are internal signals and can be ignored. We use the derived data in X.txt
 
-# Step 1: Merge the training and the test sets to create one data set.
+# Step 1: Merge data
 The 'test' and 'train' datasets can be merged, or better added up, to get the 
 complete dataset again.
 
@@ -111,7 +111,7 @@ We now have 6 activities (```activity_labels.txt```), 561 features
 (```features.txt```), 10299 subject rows (```subject.txt```), 10299 activity 
 rows (```y.txt```) and 10299 observations (```X.txt```) in the directory ```data/merged_dataset```.
 
-# Step 2: Extract only the measurements on the mean and standard deviation for each measurement.
+# Step 2: Extract data
 
 
 
