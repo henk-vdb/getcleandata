@@ -104,11 +104,15 @@ the directory for the merged dataset: ```data/merged_dataset```.
 It then reads in the ```subject_test.txt```, ```X_test.txt``` and ```y_test.txt```
 and simply adds them up to the ```subject_train.txt```, ```X_train.txt``` 
 and ```y_train.txt``` with the ```rbind``` function. The reunited tables
-are stored as ```subject.txt```, ```X.txt``` and ```y.txt``` in the directory ```data/merged_dataset```.
+are stored as ```subject.txt```, ```X.txt``` and ```y.txt``` in 
+the directory ```data/merged_dataset```.
 
 We now have 6 activities (```activity_labels.txt```), 561 features
 (```features.txt```), 10299 subject rows (```subject.txt```), 10299 activity 
 rows (```y.txt```) and 10299 observations (```X.txt```) in the directory 
 ```data/merged_dataset```.
+
+# Step 2: Extract only the measurements on the mean and standard deviation for each measurement.
+
 
 
