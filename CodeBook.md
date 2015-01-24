@@ -132,10 +132,10 @@ as ```features.txt``` and ```X.txt``` in the directory ```data/extracted_dataset
 We now have 6 activities (```activity_labels.txt```), 66 features
 (```features.txt```), 10299 subject rows (```subject.txt```), 10299 activity 
 rows (```y.txt```) and 10299 observations times 66 variables in (```X.txt```) 
-in the directory ```data/merged_dataset```.
+in the directory ```data/extracted_dataset```.
 
 # Step 3 and 4: Clean the data
-In this step we ar going to rename labels and variable names as well as rearange 
+In this step we are going to rename labels and variable names as well as rearange 
 the data, to get from _wide_ to _long_ data. The code is in ```run_analysis.R.cleanData```,
 
 Activity labels are renamed and stored as ```activities.txt``` in ```data/cleaned_dataset```.
@@ -166,7 +166,7 @@ the average of each variable for each activity and each subject.
 The code in ```run_analysis.R.tidyData``` does just that.It copies the 
 ```activities.txt``` to the designated directory ```data/tidy_dataset```.
 It takes the average of values for mean and standard deviation and stores 
-the lost as ```average_signal.txt```.
+the last as ```average_signal.txt```.
 
 The final dataset has rows for 30 subjects, 6 activities and 33 variables: `30 * 6 * 33 = 5940` rows.
 It has 5 columns: 'subjectid', 'activityid', the variable 'signal' and the two values
