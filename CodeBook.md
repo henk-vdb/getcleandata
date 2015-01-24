@@ -109,8 +109,7 @@ the directory ```data/merged_dataset```.
 
 We now have 6 activities (```activity_labels.txt```), 561 features
 (```features.txt```), 10299 subject rows (```subject.txt```), 10299 activity 
-rows (```y.txt```) and 10299 observations (```X.txt```) in the directory 
-```data/merged_dataset```.
+rows (```y.txt```) and 10299 observations (```X.txt```) in the directory ```data/merged_dataset```.
 
 # Step 2: Extract only the measurements on the mean and standard deviation for each measurement.
 
