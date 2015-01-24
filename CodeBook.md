@@ -164,7 +164,7 @@ The code in ```run_analysis.R.tidyData``` does just that.It copies the
 It takes the average of values for mean and standard deviation and stores 
 the lost as ```average_signal.txt```.
 
-# Description of variable and its values 
+# Description of variables and values 
 Also in ```codebook.txt```.
 
 ```
