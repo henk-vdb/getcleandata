@@ -25,6 +25,10 @@ observations over ```33 * 17 = 561``` signals and variables.
 ##### Activities
 There are 6 id's and labels for activities.
 
+The ```y_train.txt``` and ```y_test.txt``` files contain the activity row headers
+for their respective windows. There are activity-id's for the 7352 observations 
+under /train and 2947 observations under /test.
+
 ##### Features
 See also ```features_info.txt```.
 
