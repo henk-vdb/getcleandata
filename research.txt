@@ -1,4 +1,23 @@
 ================================================================================
+activity_labels.txt
+================================================================================
+6 id's and labels for activities.
+
+================================================================================
+features.txt
+================================================================================
+561 features.
+
+There are 9 signals that do not have an XYZ movement:                          9
+There are 8 signals with an XYZ movement:                             3 * 8 = 24
+                                                                        --------
+Total signals:                                                                33
+
+Set of variables that were estimated from signals:                            17 
+Variables can be known because they all have '()' braces at the end.
+Signals times variables is                                         33 * 17 = 561
+
+================================================================================
 train/subject_train.txt         test/subject_test.txt
 ================================================================================
 Each row identifies the subject who performed the activity for each window sample. 
@@ -75,4 +94,5 @@ etc.
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 
 50% overlap (128 readings/window). (README.txt)
-
+--------------------------------------------------------------------------------
+These are internal signals and can be ignored. We use the derived data in X.txt

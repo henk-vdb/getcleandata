@@ -1,0 +1,54 @@
+================================================================================
+Code Book for the tidy dataset 'data/tidy_dataset'
+================================================================================
+
+This dataset contains the average (arithmetic mean) of the mean and
+standard deviation for each subject, activity and feature as measured over
+mean value and standard deviation of a series of observations on body movement.
+See: 
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+for a description of the original dataset.
+
+=======================================
+Files in this directory:
+=======================================
+- "activities.txt"  
+- "average_signal.txt"
+
+Note: a file "subjects.txt" with the descriptions of subjects, i.e. persons,
+that took part in the experiment is not present, for the simple reason that we
+do not have other information on these persons than their id.
+
+=======================================
+File "activities.txt"
+=======================================
+Inventory of the activities that where done during the experiment.
+
+- "id"          - The ID of the activity.
+
+- "label"       - A short description of the activity.
+
+=======================================
+File "average_signal.txt"
+=======================================
+Table containing the average values on mean and standard deviation for each 
+variable for each activity and each subject.
+
+- "subjectid"   - The ID of the subject that took part in the experiment. The 
+                subjectid does not point to a supplimentary file, because we 
+                have no other information on subjects then their ID.
+
+- "activityid"  - The ID of the activity that was undertaken for the 
+                observation. Points to "id" in "activities.txt".
+
+- "signal"      - The signal that was recorded for the observation.
+
+- "averagemean" - The arithmetic mean or average of the mean variable of the 
+                recorded signal for the subject, doing the activity. Units are
+                normalized and bounded within [-1,1].
+
+- "averagestandarddeviation" - The arithmetic mean or average of the 
+                standard deviation variable of the recorded signal for the 
+                subject, doing the activity. Units are normalized and bounded 
+                within [-1,1].
+
