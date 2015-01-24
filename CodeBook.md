@@ -103,7 +103,7 @@ the directory for the merged dataset: ```data/merged_dataset```.
 
 It then reads in the ```subject_test.txt```, ```X_test.txt``` and ```y_test.txt```
 and simply adds them up to the ```subject_train.txt```, ```X_train.txt``` 
-and ```y_train.txt``` with the ```rbind``` function. The reunited tables
+and ```y_train.txt``` respectively with the ```rbind``` function. The reunited tables
 are stored as ```subject.txt```, ```X.txt``` and ```y.txt``` in 
 the directory ```data/merged_dataset```.
 
@@ -112,6 +112,26 @@ We now have 6 activities (```activity_labels.txt```), 561 features
 rows (```y.txt```) and 10299 observations (```X.txt```) in the directory ```data/merged_dataset```.
 
 # Step 2: Extract data
+For our final dataset we only need the mean (```mean()```) and standard
+deviation (```std()```) features.
+
+Code in ```run_analysis.R.extractData``` copies 
+the ```activity_labels.txt```, ```subject.txt```
+and ```y.txt``` from the merge directory ```data/merged_dataset``` to
+the directory for extracted data: ```data/extracted_dataset```.
+
+It then selects features ending on ```-mean()``` or ```-std()```, 
+optionally followed by ```-X```, ```-Y``` or ```-Z``` from ```features.txt```,
+selects corresponding columns from ```X.txt``` and stores both extracted tables
+as ```features.txt``` and ```X.txt``` in the directory ```data/extracted_dataset```.
+
+We now have 6 activities (```activity_labels.txt```), 66 features
+(```features.txt```), 10299 subject rows (```subject.txt```), 10299 activity 
+rows (```y.txt```) and 10299 observations times 66 variables in (```X.txt```) 
+in the directory ```data/merged_dataset```.
+
+# Step 3 and 4: Clean the data
+
 
 
 
