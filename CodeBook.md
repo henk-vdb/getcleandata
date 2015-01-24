@@ -89,11 +89,27 @@ From ```README.txt```:
 > noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 
 > 50% overlap (128 readings/window).
 
-Each table in the ```test``` directory has dimensions ```2947, 128```; each
-table in the ```train``` directory has dimensions ```7352, 128```. 
+Each table in the ```test/Internal Signals``` directory has dimensions ```2947, 128```; each
+table in the ```train/Internal Signals``` directory has dimensions ```7352, 128```. 
 These are internal signals and can be ignored. We use the derived data in X.txt
 
 # Step 1: Merge the training and the test sets to create one data set.
+The 'test' and 'train' datasets can be merged, or better added up, to get the 
+complete dataset again.
 
+Code in ```run_analysis.R.mergeData``` first copies the ```activity_labels.txt``` 
+and ```features.txt``` from the download directory ```data/UCI HAR Dataset``` to
+the directory for the merged dataset: ```data/merged_dataset```.
+
+It then reads in the ```subject_test.txt```, ```X_test.txt``` and ```y_test.txt```
+and simply adds them up to the ```subject_train.txt```, ```X_train.txt``` 
+and ```y_train.txt``` with the ```rbind``` function. The reunited tables
+are stored as ```subject.txt```, ```X.txt``` and ```y.txt``` in the directory
+```data/merged_dataset```.
+
+We now have 6 activities (```activity_labels.txt```), 561 features
+(```features.txt```), 10299 subject rows (```subject.txt```), 10299 activity 
+rows (```y.txt```) and 10299 observations (```X.txt```) in the directory 
+```data/merged_dataset```.
 
 
