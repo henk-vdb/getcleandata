@@ -168,6 +168,10 @@ The code in ```run_analysis.R.tidyData``` does just that.It copies the
 It takes the average of values for mean and standard deviation and stores 
 the lost as ```average_signal.txt```.
 
+The final dataset has rows for 30 subjects, 6 activities and 33 variables: `30 * 6 * 33 = 5940` rows.
+It has 5 columns: 'subjectid', 'activityid', the variable 'signal' and the two values
+'averagemean' and 'averagestandarddeviation'.
+
 # Description of variables and values 
 Also in ```codebook.txt```.
 
