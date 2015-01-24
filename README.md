@@ -1,10 +1,6 @@
-# getcleandata
-A repo for the course project in **Getting and Cleaning Data**
+# Getting and Cleaning Data - the course project
 
-```python
-s = "Python syntax highlighting"
-print s
-```
+
 
 ```R
 loadData <- function() {
