@@ -131,7 +131,97 @@ rows (```y.txt```) and 10299 observations times 66 variables in (```X.txt```)
 in the directory ```data/merged_dataset```.
 
 # Step 3 and 4: Clean the data
+In this step we ar going to rename labels and variable names as well as rearange 
+the data, to get from _wide_ to _long_ data. The code is in ```run_analysis.R.cleanData```,
+
+Activity labels are renamed and stored as ```activities.txt``` in ```data/cleaned_dataset```.
+
+The feature names are going to be variable names and are cleaned up and tidied as far as goes;
+they still have to be unique because first they will be column names above the 
+main table. Also we add the ```subject.txt``` and ```y.txt``` as columns to the main table.
+These newly added columns get the names 'subjectid' and 'activityid'.
+
+> Each variable you measure should be in one column...
+
+and the mean and standard deviation we extracted are the variables. We use logical 
+vectors to split up and _melt_ the main table along colums that have values for 
+mean and standard deviation. This way we end up with two data frames, one for the 
+mean values and one for the standard deviation values. Their rows have not
+been altered and after cleaning up variable names in their columns 'signal' they have
+exactly the same row headers for 'subjectid', 'activityid' and 'signal'. It is therefor save
+to cbind the 'standarddeviation' column to the data frame with the mean values.
+
+We now have 6 activities (```activities.txt```) and a table with dimensions 339867 times 5 variables.
+As expected: 66 features, split over even in mean and std values gives 33 variables.
+33 times 10299 _wide_ observations give 339867 _long_ observations.
+
+# Step 5: Create a tidy dataset
+From the data set in step 4, create a second, independent tidy data set with 
+the average of each variable for each activity and each subject. 
+
+The code in ```run_analysis.R.tidyData``` does just that.It copies the 
+```activities.txt``` to the designated directory ```data/tidy_dataset```.
+It takes the average of values for mean and standard deviation and stores 
+the lost as ```average_signal.txt```.
+
+# Description of variable and its values 
+Also in ```codebook.txt```.
+
+```
+================================================================================
+Code Book for the tidy dataset 'data/tidy_dataset'
+================================================================================
+
+This dataset contains the average (arithmetic mean) of the mean and
+standard deviation for each subject, activity and feature as measured over
+mean value and standard deviation of a series of observations on body movement.
+See: 
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+for a description of the original dataset.
+
+=======================================
+Files in this directory:
+=======================================
+- "activities.txt"  
+- "average_signal.txt"
+
+Note: a file "subjects.txt" with the descriptions of subjects, i.e. persons,
+that took part in the experiment is not present, for the simple reason that we
+do not have other information on these persons than their id.
+
+=======================================
+File "activities.txt"
+=======================================
+Inventory of the activities that where done during the experiment.
+
+- "id"          - The ID of the activity.
+
+- "label"       - A short description of the activity.
+
+=======================================
+File "average_signal.txt"
+=======================================
+Table containing the average values on mean and standard deviation for each 
+variable for each activity and each subject.
+
+- "subjectid"   - The ID of the subject that took part in the experiment. The 
+                subjectid does not point to a supplimentary file, because we 
+                have no other information on subjects then their ID.
+
+- "activityid"  - The ID of the activity that was undertaken for the 
+                observation. Points to "id" in "activities.txt".
+
+- "signal"      - The signal that was recorded for the observation.
+
+- "averagemean" - The arithmetic mean or average of the mean variable of the 
+                recorded signal for the subject, doing the activity. Units are
+                normalized and bounded within [-1,1].
+
+- "averagestandarddeviation" - The arithmetic mean or average of the 
+                standard deviation variable of the recorded signal for the 
+                subject, doing the activity. Units are normalized and bounded 
+                within [-1,1].
 
 
-
+```
 
