@@ -29,18 +29,6 @@ The ```y_train.txt``` and ```y_test.txt``` files contain the activity row header
 for their respective windows. The 'y'-files contain row headers as activity-id's
 for the ```7352 + 2947 = 10299``` observations.
 
-##### Features
-See also ```features_info.txt```.
-
-There are 9 signals that do not have an XYZ movement. There are 8 signals with 
-an XYZ movement, that makes a total of 3 * 8 = 24 such signals. Total signals:
-```9 + 3 * 8 = 33``` signals.
-
-Set of variables that were estimated from signals: ```17```.
-Variables can be known because they all have '()' braces at the end.
-
-Total amount of features = signals times variables = ```33 * 17 = 561```.
-
 ##### Subjects
 Subjects are the persons that took part in the experiment. Each row in
 ```train/subject_train.txt``` and ```test/subject_test.txt``` identifies the 
@@ -69,6 +57,18 @@ dftest
 ```
 The subject files contain row headers as subject-id's (persons) 
 for the ```7352 + 2947 = 10299``` observations.
+
+##### Features
+See also ```features_info.txt```.
+
+There are 9 signals that do not have an XYZ movement. There are 8 signals with 
+an XYZ movement, that makes a total of 3 * 8 = 24 such signals. Total signals:
+```9 + 3 * 8 = 33``` signals.
+
+Set of variables that were estimated from signals: ```17```.
+Variables can be known because they all have '()' braces at the end.
+
+Total amount of features = signals times variables = ```33 * 17 = 561```.
 
 ##### The actual data
 The files ```train/X_train.txt``` and ```test/X_test.txt``` contain the actual 
