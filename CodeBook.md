@@ -19,11 +19,13 @@ dataset and see if we can make head and tails out of it. A draft-version of
 this exploration is in the file ```research.txt``` in the root of the git-hub repo.
 
 ### Dimensions of the original data
+The dimensions of the downloaded dataset are ```7352 + 2947 = 10299``` rows or
+observations over ```33 * 17 = 561``` signals and variables.
 
-#### Activities
+##### Activities
 There are 6 id's and labels for activities.
 
-#### Features
+##### Features
 See also ```features_info.txt```.
 
 There are 9 signals that do not have an XYZ movement. There are 8 signals with 
@@ -35,12 +37,12 @@ Variables can be known because they all have '()' braces at the end.
 
 Total amount of features = signals times variables = ```33 * 17 = 561```.
 
-#### Subjects
+##### Subjects
 Subjects are the persons that took part in the experiment. Each row in
 ```train/subject_train.txt``` and ```test/subject_test.txt``` identifies the 
 subject who performed the activity for each window sample. 30 people in total 
 took part in the experiment. The following probes in ```R``` give hints about
-the dimensions of the data:
+the dimensions of the subject data:
 ```R
 > dftrain <- read.table("data/UCI HAR Dataset/train/subject_train.txt")
 > dftest <- read.table("data/UCI HAR Dataset/test/subject_test.txt")
@@ -62,6 +64,36 @@ dftest
 [1] 10299
 ```
 The subject files contain row headers as subject-id's (persons) 
-for the ```7352 + 2947 = 10299``` observations
+for the ```7352 + 2947 = 10299``` observations.
+
+##### The actual data
+The files ```train/X_train.txt``` and ```test/X_test.txt``` contain the actual 
+data. The following probes in ```R``` give hints about
+the dimensions of the data:
+```R
+> dftrain <- read.table("data/UCI HAR Dataset/train/X_train.txt")
+> dim(dftrain)
+[1] 7352  561 # 7352 observations/rows over 561 features.
+
+> dftest <- read.table("data/UCI HAR Dataset/test/X_test.txt")
+> dim(dftest)
+[1] 2947  561 # 2947 observations/rows over 561 features
+```
+There are ```7352 + 2947 = 10299``` observations of ```561``` features derived 
+from internal signals.
+
+##### Internal Signals
+From ```README.txt```: 
+> The sensor signals (accelerometer and gyroscope) were 
+> pre-processed by applying 
+> noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 
+> 50% overlap (128 readings/window).
+
+Each table in the ```test``` directory has dimensions ```2947, 128```; each
+table in the ```train``` directory has dimensions ```7352, 128```. 
+These are internal signals and can be ignored. We use the derived data in X.txt
+
+# Step 1: Merge the training and the test sets to create one data set.
+
 
 
