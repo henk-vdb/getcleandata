@@ -8,7 +8,7 @@ The original dataset can be downloaded from
 
 [http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip](http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip)
 
-Key-concepts in the dataset are _features_ - a mixture of variable and value names,
+Key-concepts in the dataset are _features_ - a mixture of variable and measurement names,
 _subjects_ - the persons that did various movements that were recorded with cell phones
 and _activities_ - the movements just mentioned.
 
