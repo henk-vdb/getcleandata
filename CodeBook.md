@@ -44,7 +44,7 @@ observations over ```33 * 17 = 561``` signals and variables.
 There are 6 id's and labels for activities.
 
 The ```y_train.txt``` and ```y_test.txt``` files contain the activity row headers
-for their respective windows. The 'y'-files contain row headers as activity-id's
+for their respective windows. The 'y'-files glued together contain row headers as activity-id's
 for the ```7352 + 2947 = 10299``` observations.
 
 ##### Subjects
