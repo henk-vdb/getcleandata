@@ -239,12 +239,12 @@ variable for each activity and each subject.
 
 - "signal"      - The signal that was recorded for the observation.
 
-- "averagemean" - The arithmetic mean or average of the mean variable of the 
+- "averagemean" - The arithmetic mean or average of the mean measurement of the 
                 recorded signal for the subject, doing the activity. Units are
                 normalized and bounded within [-1,1].
 
 - "averagestandarddeviation" - The arithmetic mean or average of the 
-                standard deviation variable of the recorded signal for the 
+                standard deviation measurement of the recorded signal for the 
                 subject, doing the activity. Units are normalized and bounded 
                 within [-1,1].
 
