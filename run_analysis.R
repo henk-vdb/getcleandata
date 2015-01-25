@@ -11,6 +11,7 @@ dataMerged <- file.path(dataDir, "merged_dataset")
 dataExtracted <- file.path(dataDir, "extracted_dataset")
 dataCleaned <- file.path(dataDir, "cleaned_dataset")
 dataTidy <- file.path(dataDir, "tidy_dataset")
+reprocessData <- FALSE
 
 ################# Functions #################
 
@@ -200,26 +201,29 @@ if (file.exists(dataLocationAlt)) {
 }
 
 # Get the raw data if it is not at the expected location.
-if (!file.exists(dataLocation)) {
-        loadData()  
+if (!file.exists(dataLocation) | reprocessData) {
+        loadData() 
+        reprocessData <- TRUE
 }
 
 message("Using data in: ", dataLocation)
 
 # The actual assignment
 # 1. Merges the training and the test sets to create one data set.
-if (!file.exists(dataMerged)) {
+if (!file.exists(dataMerged) | reprocessData) {
         mergeData()
+        reprocessData <- TRUE
 }
 
 # 2. Extracts only the measurements on the mean and standard deviation for each measurement.
-if (!file.exists(dataExtracted)) {
+if (!file.exists(dataExtracted) | reprocessData) {
         extractData()
+        reprocessData <- TRUE
 }
 
 # 3. Uses descriptive activity names to name the activities in the data set
 # 4. Appropriately labels the data set with descriptive variable names. 
-if (!file.exists(dataCleaned)) {
+if (!file.exists(dataCleaned) | reprocessData) {
         cleanData()
 }
 
