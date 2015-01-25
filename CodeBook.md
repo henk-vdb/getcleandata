@@ -181,13 +181,13 @@ As expected: 66 features, split over even in mean and std values gives 33 variab
 From the data set in step 4, create a second, independent tidy data set with 
 the average of each variable for each activity and each subject. 
 
-The code in ```run_analysis.R.tidyData``` does just that.It copies the 
+The code in ```run_analysis.R.tidyData``` does just that. It copies the 
 ```activities.txt``` to the designated directory ```data/tidy_dataset```.
 It takes the average of values for mean and standard deviation and stores 
 the last as ```average_signal.txt```.
 
 The final dataset has rows for 30 subjects, 6 activities and 33 variables: `30 * 6 * 33 = 5940` rows.
-It has 5 columns: 'subjectid', 'activityid', the variable 'signal' and the two values
+It has 5 columns: 'subjectid', 'activityid', the variable 'signal' and the two measurements
 'averagemean' and 'averagestandarddeviation'.
 
 # Description of variables and values 
