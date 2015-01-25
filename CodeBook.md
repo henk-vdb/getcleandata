@@ -12,7 +12,7 @@ Key-concepts in the dataset are _features_ - a mixture of variable and measureme
 _subjects_ - the persons that did various movements that were recorded with cell phones
 and _activities_ - the movements just mentioned.
 
-Essentially what the script does, is
+Essentially what the `run_analysis.R` script in this repo does, is
 * reunite two parts (_test_- and _train_-data) of the dataset;
 * extract data and variable names that have _mean_ or _standard deviation_ values 
 (they have "_mean()_" or "_std()_" in the variable name);
