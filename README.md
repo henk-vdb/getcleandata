@@ -22,6 +22,9 @@ reprocessing of the data.
 Finally the tidy dataset will be stored in the directory `data/tidy_dataset` and 
 the main table will be present in your working directory as data.table under the name `dt.average`.
 
+For a more in-depth tale of analysis and steps see the 
+Code Book: [CodeBook.md](https://github.com/henk-vdb/getcleandata/blob/master/CodeBook.md).
+
 Happy dataing.
 
 
