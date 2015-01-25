@@ -233,5 +233,6 @@ tidyData()
 
 dt.average <- data.table(read.table(file.path(dataTidy, "average_signal.txt"), 
                                     header = TRUE))
+setkey(dt.average, subjectid, activityid, signal)
 message("Done. Loaded '", file.path(dataTidy, "average_signal.txt"),
         "' as data.table with name 'dt.average'.")
