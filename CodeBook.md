@@ -8,6 +8,24 @@ The original dataset can be downloaded from
 
 [http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip](http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip)
 
+Key-concepts in the dataset are _features_ - a mixture of variable and value names,
+_subjects_ - the persons that did various movements that were recorded with cell phones
+and _activities_ - the movements just mentioned.
+
+Essentially what the script does, is
+* reunite two parts (_test_- and _train_-data) of the dataset;
+* extract data and variable names that have _mean_ or _standard deviation_ values 
+(they have "_mean()_" or "_std()_" in the variable name);
+* split the data along _mean_ and _standard deviation_ values, rearange the data
+from _wide_ data, with variable and value names mixed up,
+to _long_ data, with _mean_ and _standard deviation_ as the value-columns and
+the rest of the original feature names as the variable names in the column _signal_;
+* create a new tidy dataset with the average of both value-columns for each subject, activity and signal.
+
+Getting dimensions of the original dataset was of great help to get grip on it.
+We'll explore the original dataset first, then we describe the steps where with we 
+got the tidy dataset. Finally we describe each variable and its values in the tidy data set.
+
 ## Exploration
 The ```run_analysis.R``` script will -after sourcing- download 
 the original dataset and unzip it in the directory ```data/UCI HAR Dataset``` 
