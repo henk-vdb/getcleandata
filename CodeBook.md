@@ -165,7 +165,7 @@ These newly added columns get the names 'subjectid' and 'activityid'.
 
 > Each variable you measure should be in one column...
 
-and the mean and standard deviation we extracted are the variables. We use logical 
+and the mean and standard deviation we extracted are the variables we measure. We use logical 
 vectors to split up and _melt_ the main table along colums that have values for 
 mean and standard deviation. This way we end up with two data frames, one for the 
 mean values and one for the standard deviation values. Their rows have not
